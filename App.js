@@ -1,16 +1,14 @@
-import { Text } from 'react-native';
-import { Profil } from './components/Profil';
+import { Text, View } from "react-native";
+import { ProfileCard } from "./components/ProfileCard";
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
+import { s } from "./App.style";
 
 export default function App() {
-  return (<>
-    <Text>Hey</Text>
-    <Text>Hey</Text>
-    <Text>Hey</Text>
-    <Text>Hey</Text>
-    <Text>Hey</Text>
-    <Text>Hey</Text>
-    <Text>Hey</Text>
-    <Profil/>
-  </>
-  )
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1, justifyContent: "center", padding: 20 }}>
+        <ProfileCard />
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
 }
